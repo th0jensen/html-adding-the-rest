@@ -1,0 +1,71 @@
+* {
+  font-family: Roboto;
+  margin: 0;
+}
+
+.container {
+  display: grid;
+  height: 100vh;
+  width: 100vw;
+  grid-template-rows: 5vh 1fr;
+}
+
+header {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.gmail {
+  background-color: lightblue;
+}
+
+.search {
+  background-color: teal;
+}
+
+.icons {
+  background-color: lightcyan;
+  grid-column: 3 / -1;
+}
+
+.folders {
+  background-color: tomato;
+}
+
+.mail {
+  background-color: darkred;
+}
+
+.settings {
+  background-color: pink;
+}
+
+.apps {
+  background-color: red;
+}
+
+@media (max-width: 860px) {
+  /* Make the primary elements occupy more space */
+  .mail {
+    grid-column: 2 / -1;
+  }
+  .folders {
+    grid-column: 1 / span 1;
+  }
+  .search {
+    grid-column: 2 / span 2;
+  }
+  .icons {
+    grid-column: 4 / span 1;
+  }
+  /* Hide unnecessary functionality */
+  .settings,
+  .apps {
+    display: none;
+  }
+}

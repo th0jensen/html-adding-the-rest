@@ -1,0 +1,75 @@
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/web/woff2/JetBrainsMono-Regular.woff2')
+    format('woff2');
+}
+
+* {
+  font-family: JetBrains Mono;
+  text-decoration: none;
+  margin: 0;
+}
+
+.container {
+  height: 100vh;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  display: grid;
+  grid-template-rows: 15vh 1fr;
+  grid-template-columns: 1fr;
+  padding: 20px;
+}
+
+.header {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  grid-template-rows: 5vh 10vh;
+  grid-template-columns: 1fr;
+}
+
+h1 {
+  grid-row: 2 / -1;
+}
+
+.navigation-items {
+  grid-area: 2 / -1;
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 5vw;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.page-button {
+  padding: 1vw;
+}
+
+a {
+  color: black;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 596px) {
+  .header {
+    margin-left: 0.5vw;
+    text-align: left;
+  }
+  .navigation-items {
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+    row-gap: 1vh;
+    text-align: left;
+  }
+}

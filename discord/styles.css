@@ -1,0 +1,44 @@
+* {
+  font-family: Roboto;
+  margin: 0;
+}
+
+.container {
+  display: grid;
+  height: 100vh;
+  width: 100vw;
+  grid-template-rows: 1fr;
+  grid-template-columns: 5vw 15vw 1fr;
+}
+
+.icons {
+  background-color: blue;
+  grid-column: 1 / span 1;
+}
+
+.server-overview {
+  background-color: teal;
+  grid-column: 2 / span 1;
+  display: grid;
+  grid-template-rows: 5vh 1fr 1fr 1fr 1fr 1fr 5vh;
+}
+
+.chat-window {
+  background-color: brown;
+  grid-column: 3 / span 1;
+  display: grid;
+  grid-template-rows: 5vh 1fr 5vh;
+}
+
+@media (max-width: 860px) {
+  /* Discord is all about chatting right? */
+  .chat-window {
+    grid-column: 1/-1;
+  }
+  /* Navigation items can be accessed from a back button */
+  /* or a hamburger menu */
+  .icons,
+  .server-overview {
+    display: none;
+  }
+}

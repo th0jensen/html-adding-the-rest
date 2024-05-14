@@ -1,0 +1,254 @@
+* {
+  font-family: Roboto;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: grid;
+  height: 100vh;
+  width: 100vw;
+  grid-template-rows: 50px 1fr;
+  grid-template-columns: 30vw auto 30vw;
+}
+
+.navbar {
+  grid-row: 1 / span 1;
+  grid-column: 1 / -1;
+  background-color: white;
+  padding: 5px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-rows: 25px;
+  grid-template-columns: 20vw 1fr 1fr 20vw;
+  grid-gap: 5px;
+  margin-top: 7px;
+}
+
+.logo-and-search {
+  grid-column: 2 / span 1;
+  display: grid;
+  grid-template-rows: 25px;
+  grid-template-columns: 25px 1fr auto;
+  grid-gap: 15px;
+}
+
+#logo {
+  height: 25px;
+  max-width: 100%;
+}
+
+.searchbar {
+  background-color: #edf3f8;
+  height: 25px;
+  border-radius: 5px;
+  border: solid 1px gray;
+}
+
+.buttons {
+  grid-column: 3 / span 1;
+  display: grid;
+  justify-content: right;
+  grid-template-rows: 25px;
+  grid-template-columns: 50px 50px 50px 50px 50px 50px 50px 50px;
+  grid-gap: 1vw;
+  color: #707070;
+}
+
+/* Left side of the page */
+.left {
+  grid-row: 2 / -1;
+  grid-column: 1 / span 1;
+  background-color: #f3f3ec;
+  /* Define the grid for children */
+  display: grid;
+  grid-template-rows: 20vh 7vh 30vh;
+  grid-template-columns: 1fr 15vw;
+}
+
+.left .header {
+  grid-row: 1 / span 1;
+  grid-column: 2 / -1;
+  background-color: white;
+  border-radius: 5px;
+  margin: 10px;
+}
+
+.left .content {
+  grid-row: 2 / span 1;
+  grid-column: 2 / -1;
+  background-color: white;
+  border-radius: 5px;
+  margin: 10px;
+}
+
+.left .footer {
+  grid-row: 3 / span 1;
+  grid-column: 2 / -1;
+  background-color: white;
+  border-radius: 5px;
+  margin: 10px;
+}
+
+/* Main content of the page */
+.main {
+  grid-row: 2 / -1;
+  grid-column: 2 / span 1;
+  background-color: #f3f3ec;
+  /* Define the grid for children */
+  display: grid;
+  grid-template-rows: 10vh auto 15vh;
+  grid-template-columns: 1fr;
+}
+
+.main .compose {
+  grid-row: 1 / span 1;
+  grid-column: 1 / -1;
+  background-color: white;
+  border-radius: 5px;
+  margin: 10px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-rows: 5px 1fr 5px;
+  grid-template-columns: 5px 1fr 50px 50px;
+}
+
+.main .compose input,
+.main .compose input:focus {
+  height: 100%;
+  grid-column: 2 / span 1;
+  grid-row: 2 / span 1;
+  border: none;
+  outline: none;
+}
+
+.main .compose button {
+  color: white;
+  grid-row: 2 / span 1;
+  grid-column: 3 / span 1;
+  background-color: #0668c8;
+  border-radius: 5px;
+  border: none;
+  padding: 5px;
+}
+
+.main .posts {
+  height: auto;
+  grid-row: 2 / span 1;
+  grid-column: 1 / -1;
+  background-color: white;
+  border-radius: 5px;
+  margin: 10px;
+}
+
+.posts .post-wrapper {
+  height: 100%;
+  display: grid;
+  grid-template-rows: 50px auto 50px;
+  grid-template-columns: 1fr;
+  margin: 10px;
+}
+
+.posts .post-info {
+  grid-column: 1 / span;
+  display: grid;
+  grid-template-rows: 1 fr;
+  grid-template-columns: 50px 15px auto;
+  align-items: center;
+}
+
+.posts .post-info .profile-picture {
+  max-width: 100%;
+  height: auto;
+  border-radius: 25px;
+  display: block;
+}
+
+.posts .post-info span {
+  grid-column: 3/-1;
+}
+
+.posts .post-content {
+  grid-row: 2 / span 1;
+  margin-top: 15px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-rows: auto auto;
+  grid-template-columns: 1fr;
+}
+
+.posts .post-content .post-attachment {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.posts .post-reactions {
+  grid-row: 3 / span 1;
+  margin-left: 25px;
+  display: grid;
+  grid-template-columns: 30px 30px 30px;
+  column-gap: 5px;
+}
+
+.main .footer {
+  grid-row: 3 / span 1;
+  grid-column: 1 / -1;
+  background-color: white;
+  border-radius: 5px;
+  margin: 10px;
+}
+
+/* Right side of the page */
+.right {
+  grid-row: 2 / -1;
+  grid-column: 3 / span 1;
+  background-color: #f3f3ec;
+  /* Define the grid for children */
+  display: grid;
+  grid-template-rows: 30vh 30vh 30vh;
+  grid-template-columns: 15vw 1fr;
+}
+
+.right .header {
+  grid-row: 1 / span 1;
+  grid-column: 1 / span 1;
+  background-color: white;
+  border-radius: 5px;
+  margin: 10px;
+}
+
+.right .content {
+  grid-row: 2 / span 1;
+  grid-column: 1 / span 1;
+  background-color: white;
+  border-radius: 5px;
+  margin: 10px;
+}
+
+.right .footer {
+  grid-row: 3 / -1;
+  grid-column: 1 / span 1;
+  background-color: white;
+  border-radius: 5px;
+  margin: 10px;
+}
+
+@media (max-width: 1111px) {
+  /* Hide the sidebars, they can be accessed from other menus */
+  .left,
+  .right,
+  .buttons {
+    display: none;
+  }
+  /* Make the main feed take the entire screen */
+  .main {
+    grid-column: 1/-1;
+  }
+  .navbar {
+    grid-template-columns: 5vw 1fr 5vw;
+  }
+}
